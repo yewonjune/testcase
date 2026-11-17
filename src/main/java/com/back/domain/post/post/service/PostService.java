@@ -38,6 +38,10 @@ public class PostService {
         return post.addComment(content);
     }
 
+    public boolean deleteComment(Post post, PostComment postComment) {
+        return post.deleteComment(postComment);
+    }
+
     public void flush() {
         postRepository.flush();
     }
