@@ -30,6 +30,10 @@ public class PostService {
         return postRepository.findAll();
     }
 
+    public void delete(Post post) {
+        postRepository.delete(post);
+    }
+
     public PostComment writeComment(Post post, String content) {
         return post.addComment(content);
     }
